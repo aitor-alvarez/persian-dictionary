@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <img alt="logo" class="img-responsive1 "   src="assets/umd_logo.jpg" > 
+        <img alt="logo" class="img-responsive2 "  src="assets/flagship_logo.png" >
+      </ion-title>
+    <ion-title dir="rtl"><strong>فرهنگ زبان آموز فارسی</strong></ion-title>
+
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <strong class="capitalize" dir="rtl">خانه </strong>
+      <ion-title dir="rtl">فرهنگ زبان آموز فارسی</ion-title>
+    </ion-toolbar>
+    
+
+  </ion-header>
+
+  <div id="container">
+    
+
+    <ion-card>
+  <ion-card-header>
+    
+    <ion-card-title dir="rtl">همه واژگان</ion-card-title>
+  </ion-card-header>
+</ion-card>
+  <ion-item *ngFor="let word of words">
+    
+    <ion-label dir="rtl" [routerLink]="'/details/' + word.id" >{{ word.word }}</ion-label>
+ 
+  </ion-item>
+
+  </div>
+</ion-content>

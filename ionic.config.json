@@ -1,5 +1,7 @@
 {
-  "name": "PersianDic",
-  "integrations": {},
+  "name": "Persian Learner's Dictionary",
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <img alt="logo" class="img-responsive1 "   src="assets/umd_logo.jpg" > 
+        <img alt="logo" class="img-responsive2 "  src="assets/flagship_logo.png" >
+      </ion-title>
+    <ion-title dir="rtl"><strong>فرهنگ زبان آموز فارسی</strong></ion-title>
+
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      
+     <ion-card-title dir="rtl">برگزیده ها</ion-card-title>
+     
+    </ion-card-header> 
+  </ion-card>
+  <ion-list show-delete="showDelete" *ngFor="let word of favs">
+  <ion-item >
+    <button ion-button clear (click)="deleteItem(word[1])">
+      <ion-icon name="trash"></ion-icon>
+    </button>
+
+    <ion-label dir="rtl" [routerLink]="'/details/' + word[1]" >{{ word[0] }}</ion-label>
+    
+  </ion-item>
+</ion-list>
+</ion-content>

@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Persian Dictionary</ion-title>
+
+  </ion-toolbar>
+  <ion-toolbar>
+  <ion-searchbar></ion-searchbar>
+</ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <strong class="capitalize">Search</strong>
+      
+    </ion-toolbar> 
+
+  </ion-header>
+
+  <div id="container">
+
+    <ion-card>
+  <ion-card-header>
+    
+   <ion-card-title>Search Results</ion-card-title>
+   
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-list>
+    	 <ion-item [routerLink]="'/details/' + word.id" detail="true" *ngFor="let word of wordService.words">
+        	<ion-label dir="rtl">{{ word.word }}</ion-label>
+   		 </ion-item>
+     </ion-list>
+  </ion-card-content>
+ 
+</ion-card>
+    
+  </div>
+</ion-content>

@@ -1,0 +1,109 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Persian Dictionary</ion-title>
+
+  </ion-toolbar>
+  <ion-toolbar>
+</ion-toolbar>
+</ion-header>
+  
+  <ion-content [fullscreen]="true">
+  <form [formGroup]="createWordForm" (submit)="createWord()">
+    <ion-item>
+      <ion-label stacked>Word:</ion-label>
+      <ion-input
+        formControlName="word"
+        type="text"
+      >
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Grammar:</ion-label>
+      <ion-input
+        formControlName="grammar"
+        type="text"
+      >
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Pronunciation:</ion-label>
+      <ion-input
+        formControlName="pronunciation"
+        type="text"
+      >
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Roots (separate with spaces):</ion-label>
+      <ion-input
+        formControlName="roots"
+        type="text"
+      >
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Definition:</ion-label>
+      <ion-input
+        formControlName="definition"
+        type="text"
+      >
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Example:</ion-label>
+      <ion-input
+        formControlName="example"
+        type="text"
+      >
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Translation:</ion-label>
+      <ion-textarea
+        formControlName="translation"
+        type="text"
+      >
+      </ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Related:</ion-label>
+      <ion-textarea
+        formControlName="related"
+        type="text"
+      >
+      </ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Phrasal Verb</ion-label>
+      <ion-textarea
+        formControlName="phrasal_verb"
+        type="text"
+      >
+      </ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Idioms</ion-label>
+      <ion-textarea
+        formControlName="idioms"
+        type="text"
+      >
+      </ion-textarea>
+    </ion-item>
+
+    <ion-button expand="block" type="submit" [disabled]="!createWordForm.valid">
+      Add Word
+    </ion-button>
+  </form>
+</ion-content>
