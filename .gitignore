@@ -32,3 +32,4 @@ npm-debug.log*
 .firebaserc
 storage.rules
 resources/
+src/app/credentials.ts
