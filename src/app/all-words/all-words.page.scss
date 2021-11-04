@@ -1,12 +1,16 @@
 .img-responsive1{
-    float: right;
-    margin: 0 0 35px 0; 
-    height: auto;
+  float: right;
+  margin: 0 0 35px 0; 
+  max-height: 85px;
+}
+
+.img-responsive2{
+  float: left;
+  margin: 0 0 0 35px; 
+  padding-top: 1em;
+  max-height: 85px;
+}  
+
+  .header{
+    --color: var(--ion-color-step-850, #b3393c);
   }
-  
-  .img-responsive2{
-    float: left;
-    margin: 0 0 0 35px; 
-    padding-top: 1em;
-    height: auto;
-  }  

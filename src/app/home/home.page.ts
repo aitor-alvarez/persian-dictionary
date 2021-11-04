@@ -28,13 +28,14 @@ public wordList: any[];
   async ionViewWillEnter(){
     
     this.wordList = await this.initializeWords();
-      console.log(this.wordList)
+      
   }
 
   async initializeWords(): Promise<any> {
     
-    let wordList = await this.firestore.collection('words')
-      .valueChanges().pipe(first()).toPromise();
+    let wordList = []
+    //await this.firestore.collection('words')
+      //.valueChanges().pipe(first()).toPromise();
     return wordList;
   }
   reloadPage() { 
